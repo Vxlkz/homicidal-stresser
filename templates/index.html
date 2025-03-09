@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homicidal Stresser - Router Killer</title>
+    <style>
+        body { font-family: monospace; text-align: center; background: #000; color: #f00; }
+        input, select { padding: 10px; background: #111; color: #f00; border: 1px solid #f00; }
+        input[type="submit"], a { padding: 10px 20px; background: #900; color: #fff; border: none; cursor: pointer; }
+        input[type="submit"]:hover, a:hover { background: #600; }
+        .message { margin-top: 20px; color: #f00; }
+    </style>
+</head>
+<body>
+    <h1>Homicidal Stresser - Router Killer</h1>
+    <form method="POST">
+        <input type="text" name="target_ip" placeholder="Router IP (e.g., 192.168.1.1)" required>
+        <select name="attack_type">
+            <option value="all">Full Annihilation</option>
+            <option value="upnp">UPnP Exploit</option>
+            <option value="nat">NAT Exhaustion</option>
+            <option value="icmp">ICMP Amplification</option>
+            <option value="udp">UDP Flood</option>
+            <option value="dns">DNS Amplification</option>
+        </select>
+        <input type="number" name="duration" placeholder="Duration (s)" value="60" min="1" required>
+        <input type="submit" value="Execute Router">
+    </form>
+    <p><a href="/stop">Spare Router</a></p>
+    <div class="message">{{ message }}</div>
+</body>
+</html>
